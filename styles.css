@@ -1,0 +1,208 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+h2 {
+    font-size: 28px;
+    color: #4a90e2;
+    margin-bottom: 20px;
+}
+
+/* Card Container */
+.container {
+    width: 100%;
+    max-width: 900px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    margin: 20px;
+}
+
+.container h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="file"], .button, #imageLabel {
+    width: 80%;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus,
+button:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+.bot_image{
+    width: 200px;
+    height: auto;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.image{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+button:hover {
+    background-color: #ffffff;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+#imageLabel {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+    border: solid 1px #ddd;
+    border-radius: 8px;
+    background-color: white;
+    gap: 10px;
+    margin: 0px;
+    height: 60px;
+    width:220px;
+    color: #666;
+}
+
+#imageUpload {
+    display: none;
+}
+
+#sendImageBtn {
+    /* background-color: #ff7f50; */
+    color: white;
+}
+
+#imageResponse {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+#video {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+    background: #f4f7fc;
+}
+
+#startBtn,
+#stopBtn,
+#toggleBtn {
+    width: 60px;
+    margin: 10px auto;
+}
+#toggleBtn{
+    height: 54px;
+    font-size: x-large;
+}
+#buttons_div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+#startBtn {
+    background-color: #28a745;
+    color: white;
+}
+
+#stopBtn {
+    background-color: #dc3545;
+    color: white;
+}
+
+#sendBtn {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Text Response Section */
+#response {
+    font-size: 18px;
+    color: #555;
+    margin-top: 15px;
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+    overflow-y:auto;
+    max-height: 400px;
+    background-color: white;
+    border: solid gray 1px;
+    border-radius: 8px;
+    padding: 20px;
+    display: none;
+}
+
+/* Flexbox Layouts for Centering */
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
+
+/* .flex > * {
+    flex: 1 1 30%;
+} */
+
+@media (max-width: 768px) {
+    /* .flex > * {
+        flex: 1 1 100%;
+    } */
+}
+
+/* Animations */
+.fadeIn {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
